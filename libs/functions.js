@@ -19,8 +19,8 @@ module.exports = {
 	return retval;    
 },
 
-secToDHMSStr: function (seconds) {
-	retval = "";
+       secToDHMSStr: function (seconds) {
+               let retval = "";
 	var intDays = Math.floor(seconds / 86400) || 0;
 	var intHrs = Math.floor((seconds % 86400) / 3600) || 0;
 	var intMin = Math.floor(((seconds % 86400) % 3600) / 60) || 0;

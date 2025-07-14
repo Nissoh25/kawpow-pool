@@ -122,8 +122,8 @@ module.exports = function(portalConfig, poolConfigs) {
 				}
 				var intSec = poolConfigs[pool].paymentProcessing.paymentInterval || 0;
 				var intMinPymt = poolConfigs[pool].paymentProcessing.minimumPayment || 0;                 
-				var strSchema = poolConfigs[pool].paymentProcessing.schema || "PROP";  
-				tmpStr = functions.secToDHMSStr(intSec);            
+                                var strSchema = poolConfigs[pool].paymentProcessing.schema || "PROP";
+                                let tmpStr = functions.secToDHMSStr(intSec);
 				o.pools.push({"coin":pool, "fee": ttotal, "payoutscheme":strSchema, "interval":intSec, "intervalstr":tmpStr, "minimum": intMinPymt});
 			}
 			res.end(JSON.stringify(o));
